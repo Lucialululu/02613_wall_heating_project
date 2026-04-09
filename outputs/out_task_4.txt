@@ -1,0 +1,101 @@
+Starting job
+Thu Apr  9 12:21:38 CEST 2026
+CPU model:
+model name	: Intel(R) Xeon(R) Gold 6126 CPU @ 2.60GHz
+Running kernprof now!!!
+building_id, mean_temp, std_temp, pct_above_18, pct_below_15
+10000, 14.01233878811275, 6.367431059312565, 30.941014791508444, 55.542295034537624
+10009, 11.000135812436373, 5.811144379826625, 16.6712734948236, 74.9723590310584
+10014, 14.744169941950119, 7.037733284673848, 38.26367541377415, 52.80837116508215
+10019, 14.735524480624482, 7.030325006703675, 38.14915412864569, 52.92926826787113
+10029, 10.616037322820358, 6.317331938274926, 18.25563221896085, 74.51301795448481
+Wrote profile results to 'simulate_profile.py.lprof'
+Inspect results with:
+python -m line_profiler -rmt simulate_profile.py.lprof
+Profiling results:
+Timer unit: 1e-06 s
+
+Total time: 58.0747 s
+File: simulate_profile.py
+Function: jacobi at line 14
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    14                                           @profile
+    15                                           def jacobi(u, interior_mask, max_iter, atol=1e-6):
+    16         5       3232.3    646.5      0.0      u = np.copy(u)
+    17                                           
+    18     28423      23907.5      0.8      0.0      for i in range(max_iter):
+    19                                                   # Compute average of left, right, up and down neighbors, see eq. (1)
+    20     28423   31351691.6   1103.0     54.0          u_new = 0.25 * (u[1:-1, :-2] + u[1:-1, 2:] + u[:-2, 1:-1] + u[2:, 1:-1])
+    21     28423    6718444.0    236.4     11.6          u_new_interior = u_new[interior_mask]
+    22     28423   12886472.3    453.4     22.2          delta = np.abs(u[1:-1, 1:-1][interior_mask] - u_new_interior).max()
+    23     28423    7044857.8    247.9     12.1          u[1:-1, 1:-1][interior_mask] = u_new_interior
+    24                                           
+    25     28423      46103.6      1.6      0.1          if delta < atol:
+    26         5          4.1      0.8      0.0              break
+    27         5          1.5      0.3      0.0      return u
+
+Thu Apr  9 12:22:37 CEST 2026
+Finished job
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 28167287: <profiling_test> in cluster <dcc> Done
+
+Job <profiling_test> was submitted from host <n-62-27-18> by user <s224215> in cluster <dcc> at Thu Apr  9 12:21:37 2026
+Job was executed on host(s) <n-62-31-5>, in queue <hpc>, as user <s224215> in cluster <dcc> at Thu Apr  9 12:21:37 2026
+</zhome/76/c/186999> was used as the home directory.
+</zhome/76/c/186999/mini_project_02613> was used as the working directory.
+Started at Thu Apr  9 12:21:37 2026
+Terminated at Thu Apr  9 12:22:37 2026
+Results reported at Thu Apr  9 12:22:37 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -J profiling_test
+#BSUB -q hpc
+#BSUB -n 1
+#BSUB -W 00:20
+#BSUB -R "rusage[mem=2GB]"
+#BSUB -o out_task_4.txt
+
+cd $LS_SUBCWD
+
+echo "Starting job"
+date
+
+echo "CPU model:"
+grep "model name" /proc/cpuinfo | head -n 1
+
+echo "Running kernprof now!!!"
+
+~/.local/bin/kernprof -l simulate_profile.py 5
+
+echo "Profiling results:"
+python3 -m line_profiler simulate_profile.py.lprof
+
+date
+echo "Finished job"
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   59.03 sec.
+    Max Memory :                                 52 MB
+    Average Memory :                             52.00 MB
+    Total Requested Memory :                     2048.00 MB
+    Delta Memory :                               1996.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                5
+    Run time :                                   60 sec.
+    Turnaround time :                            60 sec.
+
+The output (if any) is above this job summary.
+
