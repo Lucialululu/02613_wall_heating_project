@@ -1,0 +1,766 @@
+n-62-27-19(s210659) $ cat out_task_10.txt
+Loaded module: cuda/11.8
+Running Task 10 (Profiling with nsys)
+Mon Apr 27 11:20:49 CEST 2026
+WARNING: CPU IP/backtrace sampling not supported, disabling.
+Try the 'nsys status --environment' command to learn more.
+
+WARNING: CPU context switch tracing not supported, disabling.
+Try the 'nsys status --environment' command to learn more.
+
+building_id, mean_temp, std_temp, pct_above_18, pct_below_15
+10000, 14.013084320571943, 6.367463827437949, 30.944631297240605, 55.5260207587429
+10009, 11.000211519335572, 5.811131468359584, 16.6712734948236, 74.9723590310584
+10014, 14.744523255180718, 7.037531284564431, 38.26367541377415, 52.80837116508215
+10019, 14.735843563390066, 7.030143355061631, 38.150171412294895, 52.928250984221926
+10029, 10.616104749609175, 6.317281462482516, 18.25563221896085, 74.51301795448481
+10031, 12.507972367526454, 6.278260272716716, 24.04914120731815, 66.39218690157028
+10051, 13.289457628845698, 5.999061374151037, 25.97693550756574, 62.85625091817247
+10053, 11.366697063156602, 6.261161909410697, 19.9510754583921, 72.41052538787024
+10056, 14.220169087383988, 6.17945885799662, 31.763454814173965, 57.06174975667784
+10064, 12.717842565915324, 6.964230915794328, 28.796234159056205, 62.7520205409506
+Generating '/tmp/nsys-report-a68a.qdstrm'
+[1/8] [========================100%] profile_task_10.nsys-rep
+Importer error status: Importation succeeded with non-fatal errors.
+**** Analysis failed with:
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 677\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+Status: TargetProfilingFailed
+Props {
+  Items {
+    Type: DeviceId
+    Value: "Local (CLI)"
+  }
+}
+Error {
+  Type: RuntimeError
+  SubError {
+    Type: ProcessEventsError
+    Props {
+      Items {
+        Type: ErrorText
+        Value: "/build/agent/work/323cb361ab84164c/QuadD/Host/Analysis/Modules/TraceProcessEvent.cpp(45): Throw in function const string& {anonymous}::GetCudaCallbackName(bool, uint32_t, const QuadDAnalysis::MoreInjection&)\nDynamic exception type: boost::wrapexcept<QuadDCommon::InvalidArgumentException>\nstd::exception::what: InvalidArgumentException\n[QuadDCommon::tag_message*] = Unknown driver API function index: 719\n"
+      }
+    }
+  }
+}
+
+
+**** Errors occurred while processing the raw events. ****
+**** Please see the Diagnostics Summary page after opening the report file in GUI. ****
+[2/8] [========================100%] profile_task_10.sqlite
+[3/8] Executing 'nvtxsum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)   Style               Range             
+ --------  ---------------  ---------  --------  --------  --------  --------  -----------  -------  ------------------------------
+    100.0           691027         21   32906.0   22255.0     19865    160405      30565.5  PushPop  CCCL:cub::DeviceReduce::Reduce
+
+[4/8] Executing 'osrtsum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)           Name         
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  ----------------------
+     39.3       2257105032         33    68397122.2   100155613.0        1361   153204348   46838180.5  poll                  
+     24.1       1386515567        695     1994986.4      230807.0        1030   101996600    7968792.8  read                  
+     23.8       1365486389          1  1365486389.0  1365486389.0  1365486389  1365486389          0.0  sem_wait              
+      6.4        365339969        613      595986.9      317252.0        1383    55127769    2575193.7  open64                
+      3.5        201091586        547      367626.3       12346.0        1100    20933209    1269780.6  ioctl                 
+      2.7        157562188         25     6302487.5      100322.0        3058    15912604    7786909.9  fread                 
+      0.1          4456938         39      114280.5        4043.0        1845     1996592     358539.3  fopen                 
+      0.0          2124445         11      193131.4       81886.0       11880      838922     312299.8  sem_timedwait         
+      0.0          2113239        155       13633.8        1357.0        1019     1319289     106242.7  mmap64                
+      0.0          1248189          8      156023.6       58777.5        2719      784115     264369.6  fopen64               
+      0.0          1245813         24       51908.9        1147.5        1014      770816     178074.0  fcntl                 
+      0.0           959124          5      191824.8       53041.0       39726      417356     200139.4  pthread_create        
+      0.0           420075        114        3684.9        3350.5        2703       14868       1637.9  munmap                
+      0.0           363342          7       51906.0        5882.0        1751      294335     107750.1  fgets                 
+      0.0           319709         50        6394.2        2233.5        1007      123339      17204.0  fclose                
+      0.0           226503         19       11921.2       10551.0        2055       52186      11300.7  mmap                  
+      0.0            97242          1       97242.0       97242.0       97242       97242          0.0  pthread_cond_wait     
+      0.0            37977          5        7595.4       10341.0        1202       11782       4598.4  pthread_cond_signal   
+      0.0            25380          6        4230.0        4298.5        1311        7002       2308.4  open                  
+      0.0            21687          4        5421.8        5063.0        2651        8910       2929.6  pipe2                 
+      0.0            17766          8        2220.8        2165.5        1548        3059        643.9  write                 
+      0.0            13633          2        6816.5        6816.5        4004        9629       3977.5  socket                
+      0.0             7217          1        7217.0        7217.0        7217        7217          0.0  connect               
+      0.0             4176          2        2088.0        2088.0        1841        2335        349.3  flockfile             
+      0.0             3932          2        1966.0        1966.0        1937        1995         41.0  pthread_cond_broadcast
+      0.0             2456          1        2456.0        2456.0        2456        2456          0.0  fwrite                
+      0.0             1878          1        1878.0        1878.0        1878        1878          0.0  sigaction             
+      0.0             1230          1        1230.0        1230.0        1230        1230          0.0  bind                  
+
+[5/8] Executing 'cudaapisum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls   Avg (ns)   Med (ns)   Min (ns)  Max (ns)   StdDev (ns)              Name            
+ --------  ---------------  ---------  ----------  ---------  --------  ---------  -----------  ----------------------------
+     75.8        205195186          9  22799465.1   125569.0    110366  204148180   68005770.2  cudaMalloc                  
+     22.4         60766344      12276      4950.0     4721.5      3888    1170468      11935.4  cuLaunchKernel              
+      1.1          3092931          2   1546465.5  1546465.5   1065934    2026997     679574.2  cudaHostAlloc               
+      0.6          1501357          9    166817.4   136103.0    127908     408467      90993.0  cuModuleLoadData            
+      0.0            93111          5     18622.2    19195.0     12478      23496       3949.6  cudaMemcpyAsync             
+      0.0            51824          1     51824.0    51824.0     51824      51824          0.0  cudaMemGetInfo              
+      0.0            11127          4      2781.8     2832.0      2483       2980        213.5  cudaStreamSynchronize       
+      0.0            10067          2      5033.5     5033.5      4162       5905       1232.5  cudaEventRecord             
+      0.0             9266          3      3088.7     2908.0      2101       4257       1089.3  cudaEventQuery              
+      0.0             6891          2      3445.5     3445.5      2335       4556       1570.5  cudaEventCreateWithFlags    
+      0.0             6873          4      1718.3     1440.0       702       3291       1219.3  cudaStreamIsCapturing_v10000
+      0.0             4537          1      4537.0     4537.0      4537       4537          0.0  cuInit                      
+      0.0             2167          1      2167.0     2167.0      2167       2167          0.0  cudaEventDestroy            
+      0.0             1717          1      1717.0     1717.0      1717       1717          0.0  cuModuleGetLoadingMode      
+
+[6/8] Executing 'gpukernsum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)     GridXYZ         BlockXYZ                       Name                  
+ --------  ---------------  ---------  --------  --------  --------  --------  -----------  --------------  --------------  ----------------------------------------
+     44.9         36408986       5197    7005.8    6880.0      6656     12864        529.0  2048    1    1   128    1    1  cupy_add__float64_float64_float64       
+     15.1         12236341       1751    6988.2    6848.0      6720     12737        532.3  2048    1    1   128    1    1  cupy_where__bool_float64_float64_float64
+     13.6         11044537       1756    6289.6    6176.0      6048     12832        502.4  2048    1    1   128    1    1  cupy_copy__float64_float64              
+     13.2         10691276       1742    6137.4    6016.0      5824     13152        498.2  2048    1    1   128    1    1  cupy_multiply__float_float64_float64    
+     12.6         10167470       1745    5826.6    5728.0      5631      8480        423.9  2048    1    1   128    1    1  cupy_copy__bool_bool                    
+      0.3           226754         34    6669.2    6464.5      6336      8960        619.8  2065    1    1   128    1    1  cupy_subtract__float64_float64_float64  
+      0.3           208991         34    6146.8    5952.0      5792      8352        586.3  2065    1    1   128    1    1  cupy_absolute__float64_float64          
+      0.0            17376          2    8688.0    8688.0      8480      8896        294.2  2065    1    1   128    1    1  cupy_copy__float64_float64              
+
+[7/8] Executing 'gpumemtimesum' stats report
+
+ Time (%)  Total Time (ns)  Count  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)      Operation     
+ --------  ---------------  -----  --------  --------  --------  --------  -----------  ------------------
+     98.1           204289      2  102144.5  102144.5     26688    177601     106711.6  [CUDA memcpy HtoD]
+      1.9             3936      2    1968.0    1968.0      1952      1984         22.6  [CUDA memcpy DtoH]
+
+[8/8] Executing 'gpumemsizesum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)      Operation     
+ ----------  -----  --------  --------  --------  --------  -----------  ------------------
+      2.376      2     1.188     1.188     0.262     2.114        1.309  [CUDA memcpy HtoD]
+      0.000      2     0.000     0.000     0.000     0.000        0.000  [CUDA memcpy DtoH]
+
+Generated:
+    /zhome/0f/e/160664/02613_wall_heating_project/profile_task_10.qdstrm
+    /zhome/0f/e/160664/02613_wall_heating_project/profile_task_10.nsys-rep
+    /zhome/0f/e/160664/02613_wall_heating_project/profile_task_10.sqlite
+Mon Apr 27 11:21:08 CEST 2026
