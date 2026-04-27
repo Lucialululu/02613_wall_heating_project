@@ -1,6 +1,6 @@
 #!/bin/bash
 #BSUB -J task9_cupy
-#BSUB -q gpuv100
+#BSUB -q gpua100
 #BSUB -gpu "num=1:mode=exclusive_process"
 #BSUB -n 4
 #BSUB -R "span[hosts=1]"

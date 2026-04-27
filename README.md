@@ -41,7 +41,17 @@ Med vores CUDA-implementering tager det ca. 20 sekunder for 10 bygninger, altså
 * **Beregning:** 2,0 sekunder * 4571 bygninger = 9142 sekunder.
 * **Estimeret total tid:** Omkring 152 minutter (ca. 2,5 timer) for at processere hele datasættet sekventielt igennem GPU'en.
 
-## Task 9. EMAIL SENT 
+## Task 9: 
+
+Vores målinger viser, at CuPy-implementeringen (på A100 GPU'en) er betydeligt hurtigere end den CPU-baserede reference-implementering. Mens reference-løsningen arbejder lineært gennem bygningerne, udnytter CuPy GPU'ens massive parallelisme ved at beregne temperaturfelter for hele nettet samtidigt.
+
+Estimated time to process all floorplans:
+Da vi har processeret en subset på 10 bygninger på ca. 17 sekunder (fra 10:37:25 til 10:37:42), svarer det til ca. 1,7 sekunder pr. bygning. For at behandle alle 4571 bygninger vil det estimerede tidsforbrug være:
+4571 bygninger * 1,7 sekunder ≈ 7.770 sekunder, hvilket svarer til ca. 2,15 timer.
+(Bemærk: Dette kan variere en smule afhængigt af kø-tid og belastning på GPU-noden).
+
+Surprising findings:
+Det mest overraskende var, at koden er ekstremt følsom over for det valgte GPU-miljø. Vi oplevede, at koden ikke kunne køre på gpuv100-noder grundet arkitektur-inkompatibilitet, men fungerede fejlfrit på gpua100. Desuden kræver CuPy et "opvarmnings-overhead" (first-time compilation), hvor den første kørsel tager længere tid end efterfølgende kald, hvilket vi har taget højde for i vores performance-analyse
 
 ## Task 10: Profiling the CuPy solution (nsys)
 
@@ -51,15 +61,15 @@ Hovedproblemet i en direkte CuPy-oversættelse af referencekoden er **Memory All
 Referencekoden bruger *boolean indexing* til at opdatere temperaturerne:
 `u_new_interior = u_new[interior_mask]`
 
-På en CPU virker dette fint, men på en GPU er det en katastrofe i et loop, der kører 20.000 gange. Profileringsværktøjet `nsys` (NVIDIA Nsight Systems) ville afsløre, at GPU'en bruger uforholdsmæssigt meget tid og energi på hele tiden at skabe nye, midlertidige arrays i sin hukommelse frem for at lave selve varme-udregningerne.
+På en CPU virker dette fint, men på en GPU er det en katastrofe i et loop, der kører 20.000 gange. Vores profileringsdata med `nsys` (vist i `out_task_10.txt`) bekræftede denne flaskehals: `cudaMalloc` stod for over **97%** af den samlede tid anvendt på CUDA-API kald. Dette indikerer, at GPU'en bruger uforholdsmæssigt meget tid og energi på hele tiden at allokere nye, midlertidige arrays i sin hukommelse frem for at lave selve varme-udregningerne.
 
 ### Try to fix it
-Vi identificerede dette problem på forhånd og implementerede fixet direkte i vores Task 9 kode. For at undgå den konstante memory allocation, fjernede vi boolean indexing fuldstændigt.
+For at eliminere dette overhead har vi refaktoreret koden til at bruge `cp.where()`. Dette fjerner behovet for at oprette nye, midlertidige arrays i hver iteration.
 
 I stedet bruger vi funktionen `cp.where()`, som beregner de nye værdier og opdaterer arrayet direkte ("in-place") uden at ændre arrayets størrelse eller allokere ny hukommelse:
 
 ```python
-# Løsningen fra vores simulate_task_9.py
+# Optimeret løsning i simulate_task_10.py
 u_new[1:-1, 1:-1] = cp.where(
     mask_cp,
     0.25 * (u_old[:-2, 1:-1] + u_old[2:, 1:-1] + u_old[1:-1, :-2] + u_old[1:-1, 2:]),

@@ -1,45 +1,15 @@
-n-62-27-20(s210659) $ cat out_task_9.txt
 Loaded module: cuda/11.8
 Running Task 9 (CuPy)
-Sat Apr 11 16:05:51 CEST 2026
-Traceback (most recent call last):
-  File "/dtu/projects/02613_2025/conda/miniconda3/envs/02613_2026/lib/python3.12/site-packages/cupy/cuda/compiler.py", line 731, in compile
-    nvrtc.compileProgram(self.ptr, options)
-  File "cupy_backends/cuda/libs/nvrtc.pyx", line 125, in cupy_backends.cuda.libs.nvrtc.compileProgram
-  File "cupy_backends/cuda/libs/nvrtc.pyx", line 138, in cupy_backends.cuda.libs.nvrtc.compileProgram
-  File "cupy_backends/cuda/libs/nvrtc.pyx", line 53, in cupy_backends.cuda.libs.nvrtc.check_status
-cupy_backends.cuda.libs.nvrtc.NVRTCError: NVRTC_ERROR_INVALID_OPTION (5)
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/zhome/0f/e/160664/02613_wall_heating_project/simulate_task_9.py", line 72, in <module>
-    u = jacobi(u0, interior_mask, MAX_ITER, ABS_TOL)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/zhome/0f/e/160664/02613_wall_heating_project/simulate_task_9.py", line 17, in jacobi
-    u_old = u_cp.copy()
-            ^^^^^^^^^^^
-  File "cupy/_core/core.pyx", line 691, in cupy._core.core._ndarray_base.copy
-  File "cupy/_core/core.pyx", line 717, in cupy._core.core._ndarray_base.copy
-  File "cupy/_core/core.pyx", line 686, in cupy._core.core._ndarray_base.astype
-  File "cupy/_core/_kernel.pyx", line 1374, in cupy._core._kernel.ufunc.__call__
-  File "cupy/_core/_kernel.pyx", line 1401, in cupy._core._kernel.ufunc._get_ufunc_kernel
-  File "cupy/_core/_kernel.pyx", line 1082, in cupy._core._kernel._get_ufunc_kernel
-  File "cupy/_core/_kernel.pyx", line 94, in cupy._core._kernel._get_simple_elementwise_kernel
-  File "cupy/_core/_kernel.pyx", line 82, in cupy._core._kernel._get_simple_elementwise_kernel_from_code
-  File "cupy/_core/core.pyx", line 2377, in cupy._core.core.compile_with_cache
-  File "/dtu/projects/02613_2025/conda/miniconda3/envs/02613_2026/lib/python3.12/site-packages/cupy/cuda/compiler.py", line 536, in _compile_module_with_cache
-    return _compile_with_cache_cuda(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/dtu/projects/02613_2025/conda/miniconda3/envs/02613_2026/lib/python3.12/site-packages/cupy/cuda/compiler.py", line 580, in _compile_with_cache_cuda
-    base = _preprocess('', options, arch, backend)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/dtu/projects/02613_2025/conda/miniconda3/envs/02613_2026/lib/python3.12/site-packages/cupy/cuda/compiler.py", line 473, in _preprocess
-    result, _ = prog.compile(options)
-                ^^^^^^^^^^^^^^^^^^^^^
-  File "/dtu/projects/02613_2025/conda/miniconda3/envs/02613_2026/lib/python3.12/site-packages/cupy/cuda/compiler.py", line 750, in compile
-    raise CompileException(log, self.src, self.name, options,
-cupy.cuda.compiler.CompileException: nvrtc: error: invalid value for --gpu-architecture (-arch)
-
-Sat Apr 11 16:05:52 CEST 2026
-(base) ~/02613_wall_heating_project
+Mon Apr 27 10:37:25 CEST 2026
+building_id, mean_temp, std_temp, pct_above_18, pct_below_15
+10000, 14.01309122344052, 6.3674641354189685, 30.944631297240605, 55.5260207587429
+10009, 11.000222287743142, 5.811129631204464, 16.6712734948236, 74.9723590310584
+10014, 14.744533231124421, 7.0375255771882985, 38.26367541377415, 52.80837116508215
+10019, 14.735854091157831, 7.030137358275137, 38.150171412294895, 52.92723370057273
+10029, 10.616114323778131, 6.317274294547088, 18.25563221896085, 74.51301795448481
+10031, 12.50798564383147, 6.278257732148664, 24.04914120731815, 66.39218690157028
+10051, 13.289463066934816, 5.9990610690822015, 25.97693550756574, 62.85625091817247
+10053, 11.36670662107952, 6.261159275392185, 19.9510754583921, 72.41052538787024
+10056, 14.220175763226898, 6.179458577529562, 31.763454814173965, 57.06174975667784
+10064, 12.717852832542777, 6.964230948402327, 28.796234159056205, 62.7520205409506
+Mon Apr 27 10:37:42 CEST 2026

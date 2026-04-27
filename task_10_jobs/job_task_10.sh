@@ -1,6 +1,6 @@
 #!/bin/bash
 #BSUB -J task10_nsys
-#BSUB -q gpuv100
+#BSUB -q gpua100
 #BSUB -gpu "num=1:mode=exclusive_process"
 #BSUB -n 4
 #BSUB -R "span[hosts=1]"
@@ -18,4 +18,4 @@ date
 
 nsys profile -o profile_task_10 --stats=true python simulate_task_10.py 10
 
-date
+datels 
