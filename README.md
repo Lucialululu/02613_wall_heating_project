@@ -4,7 +4,7 @@ This project investigates the performance of different numerical and parallel co
 
 [DTU course 02613 - Python and high-performance computing, Spring 2026]
 
-# NOTER
+<!-- # NOTER
 ## Task 7: Numba JIT (CPU)
 
 ### 7a) Performance af Numba JIT
@@ -74,4 +74,4 @@ u_new[1:-1, 1:-1] = cp.where(
     mask_cp,
     0.25 * (u_old[:-2, 1:-1] + u_old[2:, 1:-1] + u_old[1:-1, :-2] + u_old[1:-1, 2:]),
     u_old[1:-1, 1:-1]
-)
+) -->
